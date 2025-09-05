@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task AI - Agentes de IA Personalizados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'task-blue': '#1E3A8A',
+                        'task-light-blue': '#3B82F6',
+                        'task-green': '#10B981',
+                        'task-orange': '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-white">Task AI</h1>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-white hover:text-task-light-blue transition-colors">Início</a>
+                        <a href="sobre.html" class="text-white hover:text-task-light-blue transition-colors">Sobre Nós</a>
+                        <a href="produtos.html" class="text-white hover:text-task-light-blue transition-colors">Produtos</a>
+                        <a href="contato.html" class="text-white hover:text-task-light-blue transition-colors">Fale Conosco</a>
+                    </div>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="contato.html" class="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                        Solicitar Demo
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-white hover:text-task-light-blue">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column - Content -->
+                    <div class="space-y-8">
+                        <div class="space-y-4">
+                            <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+                                Modernizando ontem.<br>
+                                Transformando amanhã.<br>
+                                O futuro é <span class="text-task-light-blue">Inteligente</span>.
+                            </h1>
+                        </div>
+                        
+                        <div class="space-y-6 text-lg text-gray-300">
+                            <p>
+                                Com a Task AI, você pode modernizar processos em minutos: mapeie seus fluxos de trabalho, 
+                                automatize tarefas repetitivas e migre para a inteligência artificial com precisão.
+                            </p>
+                            <p>
+                                Processos manuais, documentos desorganizados, tarefas repetitivas: a Task AI corta tudo isso 
+                                com descoberta e transformação orientadas por IA, para que você possa modernizar com velocidade e precisão.
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <p class="text-xl font-medium">
+                                A próxima era da automação empresarial começa aqui.
+                            </p>
+                            <a href="contato.html" class="inline-block bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                                Começar Agora
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Abstract Graphic -->
+                    <div class="relative">
+                        <div class="w-full h-96 lg:h-[500px] bg-gradient-to-br from-task-green via-task-light-blue to-task-blue rounded-2xl opacity-80">
+                            <div class="absolute inset-0 bg-gradient-to-br from-task-green/20 via-task-light-blue/20 to-task-blue/20 rounded-2xl"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center space-y-4">
+                                    <div class="w-20 h-20 bg-white/20 rounded-full mx-auto flex items-center justify-center">
+                                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-white">IA Personalizada</h3>
+                                    <p class="text-white/80">Para seu negócio</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-8">
+                    <h2 class="text-4xl font-bold">Estamos tornando o impossível possível</h2>
+                    <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                        Estamos reengenhando como as empresas se modernizam — mais rápido, mais inteligente e com IA avançada 
+                        construída para a complexidade do mundo real. Da transformação de código legado à descoberta e migração 
+                        de VMs, substituímos gargalos por automação que realmente escala.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Nossos Valores</h2>
+                    <p class="text-xl text-gray-300">Os princípios que guiam nossa missão</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <div class="w-12 h-12 bg-task-green rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Acessibilidade</h3>
+                        <p class="text-gray-300">Tornar a inteligência artificial viável para empresas de todos os portes.</p>
+                    </div>
+                    
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <div class="w-12 h-12 bg-task-light-blue rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Personalização</h3>
+                        <p class="text-gray-300">Cada agente é único, moldado às necessidades específicas de cada cliente.</p>
+                    </div>
+                    
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <div class="w-12 h-12 bg-task-orange rounded-lg flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Transparência</h3>
+                        <p class="text-gray-300">Clareza no uso de dados, respeito à privacidade e explicabilidade dos resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-task-blue to-task-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4">Pronto para modernizar seu negócio?</h2>
+                <p class="text-xl mb-8 text-white/90">
+                    Descubra como nossos agentes de IA podem transformar seus processos.
+                </p>
+                <a href="contato.html" class="inline-block bg-white text-task-blue px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                    Solicitar Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Task AI</h3>
+                    <p class="text-gray-300 mb-4">
+                        Democratizando o uso da inteligência artificial através de agentes personalizados 
+                        que simplificam processos e aumentam a produtividade.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="sobre.html" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="text-gray-300 hover:text-white">Produtos</a></li>
+                        <li><a href="contato.html" class="text-gray-300 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>contato@taskai.com</li>
+                        <li>+55 (11) 99999-9999</li>
+                        <li>São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Task AI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
