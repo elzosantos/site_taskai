@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Task AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'task-blue': '#1E3A8A',
+                        'task-light-blue': '#3B82F6',
+                        'task-green': '#10B981',
+                        'task-orange': '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">Task AI</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-home">Início</a>
+                        <a href="sobre.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-about">Sobre Nós</a>
+                        <a href="produtos.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-products">Produtos</a>
+                        <a href="servicos.html" class="text-task-light-blue font-medium" data-translate="nav-services">Serviços</a>
+                        <a href="contato.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-contact">Fale Conosco</a>
+                    </div>
+                </nav>
+                
+                <!-- Language Selector & CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Language Selector -->
+                    <div class="relative">
+                        <button id="language-selector" class="flex items-center space-x-2 text-white hover:text-task-light-blue transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                            </svg>
+                            <span id="current-lang">PT</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Language Dropdown -->
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-20 bg-gray-800 rounded-lg shadow-lg hidden z-50">
+                            <button class="language-option w-full text-left px-4 py-2 text-white hover:bg-gray-700 rounded-t-lg" data-lang="pt">PT</button>
+                            <button class="language-option w-full text-left px-4 py-2 text-white hover:bg-gray-700 rounded-b-lg" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="contato.html" class="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-translate="cta-demo">
+                        Solicitar Demo
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" id="mobile-menu-button" class="text-white hover:text-task-light-blue focus:outline-none focus:ring-2 focus:ring-task-light-blue">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 border-t border-gray-800">
+                    <a href="index.html" class="block px-3 py-2 text-white hover:text-task-light-blue hover:bg-gray-800 rounded-md" data-translate="nav-home">Início</a>
+                    <a href="sobre.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md" data-translate="nav-about">Sobre Nós</a>
+                    <a href="produtos.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md" data-translate="nav-products">Produtos</a>
+                    <a href="servicos.html" class="block px-3 py-2 text-task-light-blue hover:bg-gray-800 rounded-md font-medium" data-translate="nav-services">Serviços</a>
+                    <a href="contato.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md" data-translate="nav-contact">Fale Conosco</a>
+                    <a href="contato.html" class="block px-3 py-2 bg-white text-black rounded-md hover:bg-gray-200 text-center font-medium" data-translate="cta-demo">Solicitar Demo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-20 bg-gradient-to-r from-task-blue to-task-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-6" data-translate="services-hero-title">Nossos Serviços</h1>
+                <p class="text-xl text-white/90 max-w-4xl mx-auto" data-translate="services-hero-desc">
+                    Na Task AI, acreditamos que a inteligência artificial deve ser acessível, prática e personalizada. 
+                    Por isso, oferecemos soluções completas que vão além da tecnologia, conectando inovação com resultados 
+                    reais para empresas de todos os portes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Agentes de IA Personalizados -->
+                    <div class="bg-gray-900 p-8 rounded-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-task-green rounded-xl flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h2 class="text-3xl font-bold" data-translate="service1-title">Agentes de Inteligência Artificial Personalizados</h2>
+                        </div>
+                        
+                        <p class="text-lg text-gray-300 mb-6" data-translate="service1-subtitle">
+                            Desenvolvemos agentes inteligentes sob medida para o seu negócio.
+                        </p>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-green mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service1-feature1">Automação de análise de contratos e documentos.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-green mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service1-feature2">Criação de termos de referência.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-green mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service1-feature3">Leitura e interpretação de relatórios e arquivos complexos.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-green mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service1-feature4">Integração de dados entre diferentes sistemas e bases.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-task-green/10 border border-task-green/20 rounded-lg p-4">
+                            <p class="text-task-green font-medium" data-translate="service1-cta">
+                                👉 Uma IA feita para ser SUA, atendendo às necessidades específicas da sua empresa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Treinamentos em IA -->
+                    <div class="bg-gray-900 p-8 rounded-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-task-light-blue rounded-xl flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                </svg>
+                            </div>
+                            <h2 class="text-3xl font-bold" data-translate="service2-title">Treinamentos em Inteligência Artificial</h2>
+                        </div>
+                        
+                        <p class="text-lg text-gray-300 mb-6" data-translate="service2-subtitle">
+                            Capacitamos equipes para entender e aplicar IA no dia a dia.
+                        </p>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-light-blue mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service2-feature1">Treinamentos práticos sobre ferramentas de IA generativa.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-light-blue mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service2-feature2">Workshops de uso de IA em rotinas administrativas, financeiras e operacionais.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-light-blue mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service2-feature3">Formação personalizada para diferentes áreas da empresa.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-task-light-blue/10 border border-task-light-blue/20 rounded-lg p-4">
+                            <p class="text-task-light-blue font-medium" data-translate="service2-cta">
+                                👉 Preparando seu time para o futuro do trabalho com IA.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Consultoria em Negócios com IA -->
+                    <div class="bg-gray-900 p-8 rounded-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-task-orange rounded-xl flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                                </svg>
+                            </div>
+                            <h2 class="text-3xl font-bold" data-translate="service3-title">Consultoria em Negócios com IA</h2>
+                        </div>
+                        
+                        <p class="text-lg text-gray-300 mb-6" data-translate="service3-subtitle">
+                            Ajudamos sua empresa a identificar oportunidades reais de transformação digital com inteligência artificial.
+                        </p>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-orange mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service3-feature1">Diagnóstico de maturidade digital e de IA.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-orange mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service3-feature2">Mapeamento de processos com potencial de automação.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-orange mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service3-feature3">Estratégias para aumentar produtividade e reduzir custos.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-orange mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service3-feature4">Apoio na implementação de soluções tecnológicas.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-task-orange/10 border border-task-orange/20 rounded-lg p-4">
+                            <p class="text-task-orange font-medium" data-translate="service3-cta">
+                                👉 Consultoria prática, com foco em resultados e impacto nos negócios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Palestras e Cursos -->
+                    <div class="bg-gray-900 p-8 rounded-2xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-task-blue rounded-xl flex items-center justify-center mr-4">
+                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5zM15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+                                </svg>
+                            </div>
+                            <h2 class="text-3xl font-bold" data-translate="service4-title">Palestras e Cursos</h2>
+                        </div>
+                        
+                        <p class="text-lg text-gray-300 mb-6" data-translate="service4-subtitle">
+                            Levamos o conhecimento de IA de forma inspiradora e acessível para equipes, eventos e organizações.
+                        </p>
+                        
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-blue mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service4-feature1">Palestras sobre tendências de IA e impacto nos negócios.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-blue mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service4-feature2">Cursos introdutórios e avançados em inteligência artificial.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-task-blue mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span data-translate="service4-feature3">Conteúdo adaptado para diferentes públicos (executivos, equipes técnicas ou empreendedores).</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="bg-task-blue/10 border border-task-blue/20 rounded-lg p-4">
+                            <p class="text-task-blue font-medium" data-translate="service4-cta">
+                                👉 Inspirando pessoas e empresas a transformar o presente com inteligência artificial.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-task-blue to-task-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4" data-translate="services-cta-title">Quer levar inteligência artificial para dentro do seu negócio?</h2>
+                <p class="text-xl mb-8 text-white/90" data-translate="services-cta-desc">
+                    Entre em contato com a Task AI e descubra como a IA pode ser SUA.
+                </p>
+                <a href="contato.html" class="inline-block bg-white text-task-blue px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-translate="cta-demo">
+                    Solicitar Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Task AI</h3>
+                    <p class="text-gray-300 mb-4" data-translate="footer-desc">
+                        Democratizando o uso da inteligência artificial através de agentes personalizados 
+                        que simplificam processos e aumentam a produtividade.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-links-title">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="sobre.html" class="text-gray-300 hover:text-white" data-translate="nav-about">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="text-gray-300 hover:text-white" data-translate="nav-products">Produtos</a></li>
+                        <li><a href="servicos.html" class="text-gray-300 hover:text-white" data-translate="nav-services">Serviços</a></li>
+                        <li><a href="contato.html" class="text-gray-300 hover:text-white" data-translate="nav-contact">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact-title">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>contato@taskai.com</li>
+                        <li>+55 (61) 98196-9631</li>
+                        <li>Brasília, BR</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
+                <p data-translate="footer-copyright">&copy; 2024 Task AI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Translations object
+        const translations = {
+            pt: {
+                'nav-home': 'Início',
+                'nav-about': 'Sobre Nós',
+                'nav-products': 'Produtos',
+                'nav-services': 'Serviços',
+                'nav-contact': 'Fale Conosco',
+                'cta-demo': 'Solicitar Demo',
+                'services-hero-title': 'Nossos Serviços',
+                'services-hero-desc': 'Na Task AI, acreditamos que a inteligência artificial deve ser acessível, prática e personalizada. Por isso, oferecemos soluções completas que vão além da tecnologia, conectando inovação com resultados reais para empresas de todos os portes.',
+                'service1-title': 'Agentes de Inteligência Artificial Personalizados',
+                'service1-subtitle': 'Desenvolvemos agentes inteligentes sob medida para o seu negócio.',
+                'service1-feature1': 'Automação de análise de contratos e documentos.',
+                'service1-feature2': 'Criação de termos de referência.',
+                'service1-feature3': 'Leitura e interpretação de relatórios e arquivos complexos.',
+                'service1-feature4': 'Integração de dados entre diferentes sistemas e bases.',
+                'service1-cta': '👉 Uma IA feita para ser SUA, atendendo às necessidades específicas da sua empresa.',
+                'service2-title': 'Treinamentos em Inteligência Artificial',
+                'service2-subtitle': 'Capacitamos equipes para entender e aplicar IA no dia a dia.',
+                'service2-feature1': 'Treinamentos práticos sobre ferramentas de IA generativa.',
+                'service2-feature2': 'Workshops de uso de IA em rotinas administrativas, financeiras e operacionais.',
+                'service2-feature3': 'Formação personalizada para diferentes áreas da empresa.',
+                'service2-cta': '👉 Preparando seu time para o futuro do trabalho com IA.',
+                'service3-title': 'Consultoria em Negócios com IA',
+                'service3-subtitle': 'Ajudamos sua empresa a identificar oportunidades reais de transformação digital com inteligência artificial.',
+                'service3-feature1': 'Diagnóstico de maturidade digital e de IA.',
+                'service3-feature2': 'Mapeamento de processos com potencial de automação.',
+                'service3-feature3': 'Estratégias para aumentar produtividade e reduzir custos.',
+                'service3-feature4': 'Apoio na implementação de soluções tecnológicas.',
+                'service3-cta': '👉 Consultoria prática, com foco em resultados e impacto nos negócios.',
+                'service4-title': 'Palestras e Cursos',
+                'service4-subtitle': 'Levamos o conhecimento de IA de forma inspiradora e acessível para equipes, eventos e organizações.',
+                'service4-feature1': 'Palestras sobre tendências de IA e impacto nos negócios.',
+                'service4-feature2': 'Cursos introdutórios e avançados em inteligência artificial.',
+                'service4-feature3': 'Conteúdo adaptado para diferentes públicos (executivos, equipes técnicas ou empreendedores).',
+                'service4-cta': '👉 Inspirando pessoas e empresas a transformar o presente com inteligência artificial.',
+                'services-cta-title': 'Quer levar inteligência artificial para dentro do seu negócio?',
+                'services-cta-desc': 'Entre em contato com a Task AI e descubra como a IA pode ser SUA.',
+                'footer-desc': 'Democratizando o uso da inteligência artificial através de agentes personalizados que simplificam processos e aumentam a produtividade.',
+                'footer-links-title': 'Links',
+                'footer-contact-title': 'Contato',
+                'footer-copyright': '© 2024 Task AI. Todos os direitos reservados.'
+            },
+            en: {
+                'nav-home': 'Home',
+                'nav-about': 'About Us',
+                'nav-products': 'Products',
+                'nav-services': 'Services',
+                'nav-contact': 'Contact',
+                'cta-demo': 'Request Demo',
+                'services-hero-title': 'Our Services',
+                'services-hero-desc': 'At Task AI, we believe that artificial intelligence should be accessible, practical, and personalized. That\'s why we offer complete solutions that go beyond technology, connecting innovation with real results for companies of all sizes.',
+                'service1-title': 'Custom Artificial Intelligence Agents',
+                'service1-subtitle': 'We develop intelligent agents tailored to your business.',
+                'service1-feature1': 'Automation of contract and document analysis.',
+                'service1-feature2': 'Creation of terms of reference.',
+                'service1-feature3': 'Reading and interpretation of complex reports and files.',
+                'service1-feature4': 'Data integration between different systems and databases.',
+                'service1-cta': '👉 An AI made to be YOURS, meeting the specific needs of your company.',
+                'service2-title': 'Artificial Intelligence Training',
+                'service2-subtitle': 'We train teams to understand and apply AI in daily work.',
+                'service2-feature1': 'Practical training on generative AI tools.',
+                'service2-feature2': 'Workshops on AI use in administrative, financial, and operational routines.',
+                'service2-feature3': 'Personalized training for different areas of the company.',
+                'service2-cta': '👉 Preparing your team for the future of work with AI.',
+                'service3-title': 'AI Business Consulting',
+                'service3-subtitle': 'We help your company identify real opportunities for digital transformation with artificial intelligence.',
+                'service3-feature1': 'Digital and AI maturity diagnosis.',
+                'service3-feature2': 'Mapping of processes with automation potential.',
+                'service3-feature3': 'Strategies to increase productivity and reduce costs.',
+                'service3-feature4': 'Support in implementing technological solutions.',
+                'service3-cta': '👉 Practical consulting, focused on results and business impact.',
+                'service4-title': 'Lectures and Courses',
+                'service4-subtitle': 'We bring AI knowledge in an inspiring and accessible way to teams, events, and organizations.',
+                'service4-feature1': 'Lectures on AI trends and business impact.',
+                'service4-feature2': 'Introductory and advanced courses in artificial intelligence.',
+                'service4-feature3': 'Content adapted for different audiences (executives, technical teams, or entrepreneurs).',
+                'service4-cta': '👉 Inspiring people and companies to transform the present with artificial intelligence.',
+                'services-cta-title': 'Want to bring artificial intelligence into your business?',
+                'services-cta-desc': 'Contact Task AI and discover how AI can be YOURS.',
+                'footer-desc': 'Democratizing the use of artificial intelligence through personalized agents that simplify processes and increase productivity.',
+                'footer-links-title': 'Links',
+                'footer-contact-title': 'Contact',
+                'footer-copyright': '© 2024 Task AI. All rights reserved.'
+            }
+        };
+
+        // Language management
+        let currentLanguage = localStorage.getItem('language') || 'pt';
+
+        function updateLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            
+            // Update current language display
+            document.getElementById('current-lang').textContent = lang.toUpperCase();
+            
+            // Update all translatable elements
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const languageSelector = document.getElementById('language-selector');
+            const languageDropdown = document.getElementById('language-dropdown');
+            
+            // Initialize language
+            updateLanguage(currentLanguage);
+            
+            // Mobile menu toggle
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                } else {
+                    menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                }
+            });
+            
+            // Language selector functionality
+            languageSelector.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('hidden');
+            });
+            
+            // Language option selection
+            const languageOptions = document.querySelectorAll('.language-option');
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const selectedLang = this.getAttribute('data-lang');
+                    updateLanguage(selectedLang);
+                    languageDropdown.classList.add('hidden');
+                });
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!languageSelector.contains(event.target) && !languageDropdown.contains(event.target)) {
+                    languageDropdown.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
