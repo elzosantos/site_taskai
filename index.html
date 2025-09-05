@@ -33,16 +33,36 @@
                 <!-- Navigation -->
                 <nav class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="text-white hover:text-task-light-blue transition-colors">Início</a>
-                        <a href="sobre.html" class="text-white hover:text-task-light-blue transition-colors">Sobre Nós</a>
-                        <a href="produtos.html" class="text-white hover:text-task-light-blue transition-colors">Produtos</a>
-                        <a href="contato.html" class="text-white hover:text-task-light-blue transition-colors">Fale Conosco</a>
+                        <a href="index.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-home">Início</a>
+                        <a href="sobre.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-about">Sobre Nós</a>
+                        <a href="produtos.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-products">Produtos</a>
+                        <a href="contato.html" class="text-white hover:text-task-light-blue transition-colors" data-translate="nav-contact">Fale Conosco</a>
                     </div>
                 </nav>
                 
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="contato.html" class="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                <!-- Language Selector & CTA Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Language Selector -->
+                    <div class="relative">
+                        <button id="language-selector" class="flex items-center space-x-2 text-white hover:text-task-light-blue transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+                            </svg>
+                            <span id="current-lang">PT</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        
+                        <!-- Language Dropdown -->
+                        <div id="language-dropdown" class="absolute right-0 mt-2 w-20 bg-gray-800 rounded-lg shadow-lg hidden z-50">
+                            <button class="language-option w-full text-left px-4 py-2 text-white hover:bg-gray-700 rounded-t-lg" data-lang="pt">PT</button>
+                            <button class="language-option w-full text-left px-4 py-2 text-white hover:bg-gray-700 rounded-b-lg" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="contato.html" class="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-translate="cta-demo">
                         Solicitar Demo
                     </a>
                 </div>
@@ -60,11 +80,11 @@
             <!-- Mobile menu -->
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 border-t border-gray-800">
-                    <a href="index.html" class="block px-3 py-2 text-white hover:text-task-light-blue hover:bg-gray-800 rounded-md">Início</a>
-                    <a href="sobre.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Sobre Nós</a>
-                    <a href="produtos.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Produtos</a>
-                    <a href="contato.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Fale Conosco</a>
-                    <a href="contato.html" class="block px-3 py-2 bg-white text-black rounded-md hover:bg-gray-200 text-center font-medium">Solicitar Demo</a>
+                    <a href="index.html" class="block px-3 py-2 text-white hover:text-task-light-blue hover:bg-gray-800 rounded-md" data-translate="nav-home">Início</a>
+                    <a href="sobre.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md" data-translate="nav-about">Sobre Nós</a>
+                    <a href="produtos.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md" data-translate="nav-products">Produtos</a>
+                    <a href="contato.html" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md" data-translate="nav-contact">Fale Conosco</a>
+                    <a href="contato.html" class="block px-3 py-2 bg-white text-black rounded-md hover:bg-gray-200 text-center font-medium" data-translate="cta-demo">Solicitar Demo</a>
                 </div>
             </div>
         </div>
@@ -80,28 +100,28 @@
                     <div class="space-y-8">
                         <div class="space-y-4">
                             <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
-                                Modernizando ontem.<br>
-                                Transformando amanhã.<br>
-                                O futuro é <span class="text-task-light-blue">Inteligente</span>.
+                                <span data-translate="hero-line1">Modernizando ontem.</span><br>
+                                <span data-translate="hero-line2">Transformando amanhã.</span><br>
+                                <span data-translate="hero-line3">O futuro é</span> <span class="text-task-light-blue" data-translate="hero-smart">Inteligente</span>.
                             </h1>
                         </div>
                         
                         <div class="space-y-6 text-lg text-gray-300">
-                            <p>
+                            <p data-translate="hero-desc1">
                                 Com a Task AI, você pode modernizar processos em minutos: mapeie seus fluxos de trabalho, 
                                 automatize tarefas repetitivas e migre para a inteligência artificial com precisão.
                             </p>
-                            <p>
+                            <p data-translate="hero-desc2">
                                 Processos manuais, documentos desorganizados, tarefas repetitivas: a Task AI corta tudo isso 
                                 com descoberta e transformação orientadas por IA, para que você possa modernizar com velocidade e precisão.
                             </p>
                         </div>
                         
                         <div class="space-y-4">
-                            <p class="text-xl font-medium">
+                            <p class="text-xl font-medium" data-translate="hero-cta-text">
                                 A próxima era da automação empresarial começa aqui.
                             </p>
-                            <a href="contato.html" class="inline-block bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                            <a href="contato.html" class="inline-block bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-translate="cta-start">
                                 Começar Agora
                             </a>
                         </div>
@@ -116,7 +136,7 @@
                             <div class="absolute bottom-6 left-6 right-6">
                                 <div class="text-center space-y-2">
                                     <h3 class="text-2xl font-bold text-white">Task AI</h3>
-                                    <p class="text-white/90">Use a Inteligência Artificial a favor do seu negócio!</p>
+                                    <p class="text-white/90" data-translate="hero-profile-text">Use a Inteligência Artificial a favor do seu negócio!</p>
                                
                                 </div>
                             </div>
@@ -130,8 +150,8 @@
         <section class="py-20 bg-gray-900">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center space-y-8">
-                    <h2 class="text-4xl font-bold">Estamos tornando o impossível possível</h2>
-                    <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    <h2 class="text-4xl font-bold" data-translate="mission-title">Estamos tornando o impossível possível</h2>
+                    <p class="text-xl text-gray-300 max-w-4xl mx-auto" data-translate="mission-desc">
                         Estamos reengenhando como as empresas se modernizam — mais rápido, mais inteligente e com IA avançada 
                         construída para a complexidade do mundo real. Da transformação de código legado à descoberta e migração 
                         de VMs, substituímos gargalos por automação que realmente escala.
@@ -144,8 +164,8 @@
         <section class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold mb-4">Nossos Valores</h2>
-                    <p class="text-xl text-gray-300">Os princípios que guiam nossa missão</p>
+                    <h2 class="text-4xl font-bold mb-4" data-translate="values-title">Nossos Valores</h2>
+                    <p class="text-xl text-gray-300" data-translate="values-subtitle">Os princípios que guiam nossa missão</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -155,8 +175,8 @@
                                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Acessibilidade</h3>
-                        <p class="text-gray-300">Tornar a inteligência artificial viável para empresas de todos os portes.</p>
+                        <h3 class="text-xl font-bold mb-2" data-translate="value1-title">Acessibilidade</h3>
+                        <p class="text-gray-300" data-translate="value1-desc">Tornar a inteligência artificial viável para empresas de todos os portes.</p>
                     </div>
                     
                     <div class="bg-gray-900 p-8 rounded-xl">
@@ -165,8 +185,8 @@
                                 <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Personalização</h3>
-                        <p class="text-gray-300">Cada agente é único, moldado às necessidades específicas de cada cliente.</p>
+                        <h3 class="text-xl font-bold mb-2" data-translate="value2-title">Personalização</h3>
+                        <p class="text-gray-300" data-translate="value2-desc">Cada agente é único, moldado às necessidades específicas de cada cliente.</p>
                     </div>
                     
                     <div class="bg-gray-900 p-8 rounded-xl">
@@ -175,8 +195,8 @@
                                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Transparência</h3>
-                        <p class="text-gray-300">Clareza no uso de dados, respeito à privacidade e explicabilidade dos resultados.</p>
+                        <h3 class="text-xl font-bold mb-2" data-translate="value3-title">Transparência</h3>
+                        <p class="text-gray-300" data-translate="value3-desc">Clareza no uso de dados, respeito à privacidade e explicabilidade dos resultados.</p>
                     </div>
                 </div>
             </div>
@@ -185,11 +205,11 @@
         <!-- CTA Section -->
         <section class="py-20 bg-gradient-to-r from-task-blue to-task-light-blue">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-bold mb-4">Pronto para modernizar seu negócio?</h2>
-                <p class="text-xl mb-8 text-white/90">
+                <h2 class="text-4xl font-bold mb-4" data-translate="cta-title">Pronto para modernizar seu negócio?</h2>
+                <p class="text-xl mb-8 text-white/90" data-translate="cta-desc">
                     Descubra como nossos agentes de IA podem transformar seus processos.
                 </p>
-                <a href="contato.html" class="inline-block bg-white text-task-blue px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                <a href="contato.html" class="inline-block bg-white text-task-blue px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors" data-translate="cta-demo">
                     Solicitar Demo
                 </a>
             </div>
@@ -202,23 +222,23 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="col-span-1 md:col-span-2">
                     <h3 class="text-2xl font-bold mb-4">Task AI</h3>
-                    <p class="text-gray-300 mb-4">
+                    <p class="text-gray-300 mb-4" data-translate="footer-desc">
                         Democratizando o uso da inteligência artificial através de agentes personalizados 
                         que simplificam processos e aumentam a produtividade.
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-links-title">Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="sobre.html" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
-                        <li><a href="produtos.html" class="text-gray-300 hover:text-white">Produtos</a></li>
-                        <li><a href="contato.html" class="text-gray-300 hover:text-white">Contato</a></li>
+                        <li><a href="sobre.html" class="text-gray-300 hover:text-white" data-translate="nav-about">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="text-gray-300 hover:text-white" data-translate="nav-products">Produtos</a></li>
+                        <li><a href="contato.html" class="text-gray-300 hover:text-white" data-translate="nav-contact">Contato</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact-title">Contato</h4>
                     <ul class="space-y-2 text-gray-300">
                         <li>contato@taskai.com</li>
                         <li>+55 (61) 98196-9631</li>
@@ -228,33 +248,126 @@
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2024 Task AI. Todos os direitos reservados.</p>
+                <p data-translate="footer-copyright">&copy; 2024 Task AI. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
     
     <script>
+        // Translations object
+        const translations = {
+            pt: {
+                'nav-home': 'Início',
+                'nav-about': 'Sobre Nós',
+                'nav-products': 'Produtos',
+                'nav-contact': 'Fale Conosco',
+                'cta-demo': 'Solicitar Demo',
+                'hero-line1': 'Modernizando ontem.',
+                'hero-line2': 'Transformando amanhã.',
+                'hero-line3': 'O futuro é',
+                'hero-smart': 'Inteligente',
+                'hero-desc1': 'Com a Task AI, você pode modernizar processos em minutos: mapeie seus fluxos de trabalho, automatize tarefas repetitivas e migre para a inteligência artificial com precisão.',
+                'hero-desc2': 'Processos manuais, documentos desorganizados, tarefas repetitivas: a Task AI corta tudo isso com descoberta e transformação orientadas por IA, para que você possa modernizar com velocidade e precisão.',
+                'hero-cta-text': 'A próxima era da automação empresarial começa aqui.',
+                'cta-start': 'Começar Agora',
+                'hero-profile-text': 'Use a Inteligência Artificial a favor do seu negócio!',
+                'mission-title': 'Estamos tornando o impossível possível',
+                'mission-desc': 'Estamos reengenhando como as empresas se modernizam — mais rápido, mais inteligente e com IA avançada construída para a complexidade do mundo real. Da transformação de código legado à descoberta e migração de VMs, substituímos gargalos por automação que realmente escala.',
+                'values-title': 'Nossos Valores',
+                'values-subtitle': 'Os princípios que guiam nossa missão',
+                'value1-title': 'Acessibilidade',
+                'value1-desc': 'Tornar a inteligência artificial viável para empresas de todos os portes.',
+                'value2-title': 'Personalização',
+                'value2-desc': 'Cada agente é único, moldado às necessidades específicas de cada cliente.',
+                'value3-title': 'Transparência',
+                'value3-desc': 'Clareza no uso de dados, respeito à privacidade e explicabilidade dos resultados.',
+                'cta-title': 'Pronto para modernizar seu negócio?',
+                'cta-desc': 'Descubra como nossos agentes de IA podem transformar seus processos.',
+                'footer-desc': 'Democratizando o uso da inteligência artificial através de agentes personalizados que simplificam processos e aumentam a produtividade.',
+                'footer-links-title': 'Links',
+                'footer-contact-title': 'Contato',
+                'footer-copyright': '© 2024 Task AI. Todos os direitos reservados.'
+            },
+            en: {
+                'nav-home': 'Home',
+                'nav-about': 'About Us',
+                'nav-products': 'Products',
+                'nav-contact': 'Contact',
+                'cta-demo': 'Request Demo',
+                'hero-line1': 'Modernizing yesterday.',
+                'hero-line2': 'Transforming tomorrow.',
+                'hero-line3': 'The future is',
+                'hero-smart': 'Smart',
+                'hero-desc1': 'With Task AI, you can modernize processes in minutes: map your workflows, automate repetitive tasks, and migrate to artificial intelligence with precision.',
+                'hero-desc2': 'Manual processes, disorganized documents, repetitive tasks: Task AI cuts through all of this with AI-driven discovery and transformation, so you can modernize with speed and precision.',
+                'hero-cta-text': 'The next era of business automation starts here.',
+                'cta-start': 'Get Started',
+                'hero-profile-text': 'Use Artificial Intelligence in favor of your business!',
+                'mission-title': 'We are making the impossible possible',
+                'mission-desc': 'We are reengineering how companies modernize — faster, smarter, and with advanced AI built for real-world complexity. From legacy code transformation to VM discovery and migration, we replace bottlenecks with automation that truly scales.',
+                'values-title': 'Our Values',
+                'values-subtitle': 'The principles that guide our mission',
+                'value1-title': 'Accessibility',
+                'value1-desc': 'Making artificial intelligence viable for companies of all sizes.',
+                'value2-title': 'Personalization',
+                'value2-desc': 'Each agent is unique, shaped to the specific needs of each client.',
+                'value3-title': 'Transparency',
+                'value3-desc': 'Clarity in data usage, respect for privacy, and explainability of results.',
+                'cta-title': 'Ready to modernize your business?',
+                'cta-desc': 'Discover how our AI agents can transform your processes.',
+                'footer-desc': 'Democratizing the use of artificial intelligence through personalized agents that simplify processes and increase productivity.',
+                'footer-links-title': 'Links',
+                'footer-contact-title': 'Contact',
+                'footer-copyright': '© 2024 Task AI. All rights reserved.'
+            }
+        };
+
+        // Language management
+        let currentLanguage = localStorage.getItem('language') || 'pt';
+
+        function updateLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+            
+            // Update current language display
+            document.getElementById('current-lang').textContent = lang.toUpperCase();
+            
+            // Update all translatable elements
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+        }
+
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
+            const languageSelector = document.getElementById('language-selector');
+            const languageDropdown = document.getElementById('language-dropdown');
             
+            // Initialize language
+            updateLanguage(currentLanguage);
+            
+            // Mobile menu toggle
             mobileMenuButton.addEventListener('click', function() {
-                // Toggle menu visibility
                 mobileMenu.classList.toggle('hidden');
                 
-                // Toggle icon between hamburger and X
                 if (mobileMenu.classList.contains('hidden')) {
-                    // Show hamburger icon
                     menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
                 } else {
-                    // Show X icon
                     menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
                 }
             });
             
-            // Close menu when clicking on a link
+            // Close mobile menu when clicking on a link
             const mobileMenuLinks = mobileMenu.querySelectorAll('a');
             mobileMenuLinks.forEach(link => {
                 link.addEventListener('click', function() {
@@ -263,11 +376,35 @@
                 });
             });
             
-            // Close menu when clicking outside
+            // Close mobile menu when clicking outside
             document.addEventListener('click', function(event) {
                 if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
                     mobileMenu.classList.add('hidden');
                     menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                }
+            });
+            
+            // Language selector functionality
+            languageSelector.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('hidden');
+            });
+            
+            // Language option selection
+            const languageOptions = document.querySelectorAll('.language-option');
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const selectedLang = this.getAttribute('data-lang');
+                    updateLanguage(selectedLang);
+                    languageDropdown.classList.add('hidden');
+                });
+            });
+            
+            // Close language dropdown when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!languageSelector.contains(event.target) && !languageDropdown.contains(event.target)) {
+                    languageDropdown.classList.add('hidden');
                 }
             });
         });
