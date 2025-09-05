@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Task AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'task-blue': '#1E3A8A',
+                        'task-light-blue': '#3B82F6',
+                        'task-green': '#10B981',
+                        'task-orange': '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">Task AI</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-300 hover:text-task-light-blue transition-colors">Início</a>
+                        <a href="sobre.html" class="text-white hover:text-task-light-blue transition-colors">Sobre Nós</a>
+                        <a href="produtos.html" class="text-gray-300 hover:text-task-light-blue transition-colors">Produtos</a>
+                        <a href="contato.html" class="text-gray-300 hover:text-task-light-blue transition-colors">Fale Conosco</a>
+                    </div>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="contato.html" class="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                        Solicitar Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-8">
+                    <h1 class="text-5xl font-bold">Sobre a Task AI</h1>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Somos uma startup de tecnologia focada em democratizar o uso da inteligência artificial 
+                        através de agentes personalizados que transformam a forma como as empresas operam.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission, Vision, Values -->
+        <section class="py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Mission -->
+                    <div class="text-center space-y-6">
+                        <div class="w-16 h-16 bg-task-green rounded-full mx-auto flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Missão</h2>
+                        <p class="text-gray-300">
+                            "Democratizar o uso da inteligência artificial, criando agentes personalizados que simplifiquem 
+                            processos, aumentem a produtividade e tragam mais inteligência para a rotina das empresas."
+                        </p>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="text-center space-y-6">
+                        <div class="w-16 h-16 bg-task-light-blue rounded-full mx-auto flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Visão</h2>
+                        <p class="text-gray-300">
+                            "Ser referência em soluções acessíveis de inteligência artificial no Brasil, tornando agentes 
+                            de IA tão comuns e indispensáveis quanto as ferramentas de escritório."
+                        </p>
+                    </div>
+
+                    <!-- Values -->
+                    <div class="text-center space-y-6">
+                        <div class="w-16 h-16 bg-task-orange rounded-full mx-auto flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Valores</h2>
+                        <p class="text-gray-300">
+                            Nossos valores fundamentais guiam cada decisão e ação, desde o desenvolvimento de produtos 
+                            até o relacionamento com nossos clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Detail -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Nossos Valores em Detalhes</h2>
+                    <p class="text-xl text-gray-300">Os princípios que fundamentam nossa cultura e operação</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-task-green">Acessibilidade</h3>
+                        <p class="text-gray-300">Tornar a inteligência artificial viável para empresas de todos os portes, democratizando o acesso à tecnologia mais avançada.</p>
+                    </div>
+                    
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-task-light-blue">Personalização</h3>
+                        <p class="text-gray-300">Cada agente é único, moldado às necessidades específicas de cada cliente, garantindo soluções verdadeiramente eficazes.</p>
+                    </div>
+                    
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-task-orange">Transparência</h3>
+                        <p class="text-gray-300">Clareza no uso de dados, respeito à privacidade e explicabilidade dos resultados, construindo confiança através da transparência.</p>
+                    </div>
+                    
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-task-green">Inovação Contínua</h3>
+                        <p class="text-gray-300">Evoluir junto com as tecnologias de IA para entregar sempre o melhor, mantendo-nos na vanguarda da inovação.</p>
+                    </div>
+                    
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-task-light-blue">Ética e Responsabilidade</h3>
+                        <p class="text-gray-300">Usar IA de forma responsável, sempre para potencializar pessoas e negócios, nunca para substituir o valor humano.</p>
+                    </div>
+                    
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 text-task-orange">Colaboração</h3>
+                        <p class="text-gray-300">Construir soluções em parceria com os clientes, entendendo seus desafios reais e cocriando o futuro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Nossa Equipe</h2>
+                    <p class="text-xl text-gray-300">Especialistas apaixonados por IA e inovação</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center space-y-4">
+                        <div class="w-32 h-32 bg-gradient-to-br from-task-green to-task-light-blue rounded-full mx-auto flex items-center justify-center">
+                            <span class="text-4xl font-bold text-white">CEO</span>
+                        </div>
+                        <h3 class="text-xl font-bold">CEO</h3>
+                        <p class="text-gray-300">Liderança estratégica e visão de mercado</p>
+                    </div>
+                    
+                    <div class="text-center space-y-4">
+                        <div class="w-32 h-32 bg-gradient-to-br from-task-light-blue to-task-blue rounded-full mx-auto flex items-center justify-center">
+                            <span class="text-4xl font-bold text-white">CTO</span>
+                        </div>
+                        <h3 class="text-xl font-bold">CTO</h3>
+                        <p class="text-gray-300">Arquitetura técnica e inovação em IA</p>
+                    </div>
+                    
+                    <div class="text-center space-y-4">
+                        <div class="w-32 h-32 bg-gradient-to-br from-task-orange to-task-green rounded-full mx-auto flex items-center justify-center">
+                            <span class="text-4xl font-bold text-white">AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold">Equipe de IA</h3>
+                        <p class="text-gray-300">Especialistas em machine learning e LangChain</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Nossa Tecnologia</h2>
+                    <p class="text-xl text-gray-300">Stack moderno e escalável para agentes de IA</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center space-y-4">
+                        <div class="w-16 h-16 bg-task-green rounded-lg mx-auto flex items-center justify-center">
+                            <span class="text-white font-bold">Python</span>
+                        </div>
+                        <h3 class="font-semibold">Python</h3>
+                    </div>
+                    
+                    <div class="text-center space-y-4">
+                        <div class="w-16 h-16 bg-task-light-blue rounded-lg mx-auto flex items-center justify-center">
+                            <span class="text-white font-bold">LangChain</span>
+                        </div>
+                        <h3 class="font-semibold">LangChain</h3>
+                    </div>
+                    
+                    <div class="text-center space-y-4">
+                        <div class="w-16 h-16 bg-task-orange rounded-lg mx-auto flex items-center justify-center">
+                            <span class="text-white font-bold">AWS</span>
+                        </div>
+                        <h3 class="font-semibold">AWS</h3>
+                    </div>
+                    
+                    <div class="text-center space-y-4">
+                        <div class="w-16 h-16 bg-task-blue rounded-lg mx-auto flex items-center justify-center">
+                            <span class="text-white font-bold">Pinecone</span>
+                        </div>
+                        <h3 class="font-semibold">Pinecone</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-task-blue to-task-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4">Pronto para conhecer nossa solução?</h2>
+                <p class="text-xl mb-8 text-white/90">
+                    Agende uma demonstração e descubra como podemos transformar seus processos.
+                </p>
+                <a href="contato.html" class="inline-block bg-white text-task-blue px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                    Agendar Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Task AI</h3>
+                    <p class="text-gray-300 mb-4">
+                        Democratizando o uso da inteligência artificial através de agentes personalizados 
+                        que simplificam processos e aumentam a produtividade.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="sobre.html" class="text-white hover:text-task-light-blue">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="text-gray-300 hover:text-white">Produtos</a></li>
+                        <li><a href="contato.html" class="text-gray-300 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>contato@taskai.com</li>
+                        <li>+55 (11) 99999-9999</li>
+                        <li>São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Task AI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

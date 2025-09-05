@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - Task AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'task-blue': '#1E3A8A',
+                        'task-light-blue': '#3B82F6',
+                        'task-green': '#10B981',
+                        'task-orange': '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-black/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">Task AI</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-300 hover:text-task-light-blue transition-colors">Início</a>
+                        <a href="sobre.html" class="text-gray-300 hover:text-task-light-blue transition-colors">Sobre Nós</a>
+                        <a href="produtos.html" class="text-gray-300 hover:text-task-light-blue transition-colors">Produtos</a>
+                        <a href="contato.html" class="text-white hover:text-task-light-blue transition-colors">Fale Conosco</a>
+                    </div>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="contato.html" class="bg-white text-black px-6 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                        Solicitar Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-8">
+                    <h1 class="text-5xl font-bold">Fale Conosco</h1>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Pronto para transformar seus processos com agentes de IA personalizados? 
+                        Entre em contato conosco e descubra como podemos ajudar seu negócio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-gray-900 p-8 rounded-xl">
+                        <h2 class="text-3xl font-bold mb-6">Solicite uma Demonstração</h2>
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="nome" class="block text-sm font-medium mb-2">Nome Completo</label>
+                                    <input type="text" id="nome" name="nome" required 
+                                           class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white">
+                                </div>
+                                <div>
+                                    <label for="empresa" class="block text-sm font-medium mb-2">Empresa</label>
+                                    <input type="text" id="empresa" name="empresa" required 
+                                           class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium mb-2">E-mail</label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white">
+                                </div>
+                                <div>
+                                    <label for="telefone" class="block text-sm font-medium mb-2">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone" required 
+                                           class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="cargo" class="block text-sm font-medium mb-2">Cargo</label>
+                                <select id="cargo" name="cargo" required 
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white">
+                                    <option value="">Selecione seu cargo</option>
+                                    <option value="ceo">CEO/Diretor</option>
+                                    <option value="cto">CTO/Diretor de TI</option>
+                                    <option value="gerente">Gerente</option>
+                                    <option value="coordenador">Coordenador</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="setor" class="block text-sm font-medium mb-2">Setor de Atuação</label>
+                                <select id="setor" name="setor" required 
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white">
+                                    <option value="">Selecione o setor</option>
+                                    <option value="advocacia">Advocacia</option>
+                                    <option value="contabilidade">Contabilidade</option>
+                                    <option value="consultoria">Consultoria</option>
+                                    <option value="tecnologia">Tecnologia</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="interesse" class="block text-sm font-medium mb-2">Produto de Interesse</label>
+                                <select id="interesse" name="interesse" required 
+                                        class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white">
+                                    <option value="">Selecione o produto</option>
+                                    <option value="analista-contabil">Analista Contábil</option>
+                                    <option value="planejamento-estrategico">Planejamento Estratégico</option>
+                                    <option value="chat-interno">Chat Interno</option>
+                                    <option value="fluxos-juridicos">Fluxos Jurídicos</option>
+                                    <option value="agente-educacional">Agente Educacional</option>
+                                    <option value="todos">Todos os produtos</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="mensagem" class="block text-sm font-medium mb-2">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" 
+                                          class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-task-light-blue focus:border-transparent text-white"
+                                          placeholder="Conte-nos sobre seus desafios e como podemos ajudar..."></textarea>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <input type="checkbox" id="privacidade" name="privacidade" required 
+                                       class="w-4 h-4 text-task-light-blue bg-gray-800 border-gray-700 rounded focus:ring-task-light-blue">
+                                <label for="privacidade" class="ml-2 text-sm text-gray-300">
+                                    Concordo com a <a href="#" class="text-task-light-blue hover:underline">Política de Privacidade</a> 
+                                    e autorizo o uso dos meus dados para contato.
+                                </label>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-task-light-blue text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors">
+                                Solicitar Demonstração
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <!-- Contact Details -->
+                        <div class="bg-gray-900 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-6">Informações de Contato</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-task-green rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">E-mail</h4>
+                                        <p class="text-gray-300">contato@taskai.com</p>
+                                        <p class="text-gray-300">comercial@taskai.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-task-light-blue rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Telefone</h4>
+                                        <p class="text-gray-300">+55 (11) 99999-9999</p>
+                                        <p class="text-gray-300">+55 (11) 3333-3333</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-task-orange rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold">Endereço</h4>
+                                        <p class="text-gray-300">São Paulo, SP - Brasil</p>
+                                        <p class="text-gray-300">Av. Paulista, 1000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Hours -->
+                        <div class="bg-gray-900 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-6">Horário de Atendimento</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-300">Segunda - Sexta</span>
+                                    <span class="text-white">08:00 - 18:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-300">Sábado</span>
+                                    <span class="text-white">09:00 - 13:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-300">Domingo</span>
+                                    <span class="text-gray-500">Fechado</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="bg-gray-900 p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold mb-6">Siga-nos</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-12 h-12 bg-task-light-blue rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-task-light-blue rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="w-12 h-12 bg-task-light-blue rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Perguntas Frequentes</h2>
+                    <p class="text-xl text-gray-300">Tire suas dúvidas sobre nossos produtos e serviços</p>
+                </div>
+                
+                <div class="max-w-3xl mx-auto space-y-6">
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2">Como funciona a implementação dos agentes de IA?</h3>
+                        <p class="text-gray-300">Nossa implementação é dividida em 3 etapas: Discovery (análise de processos), Delivery (desenvolvimento e configuração) e Monitoramento (acompanhamento e otimização). Todo o processo leva de 30 a 60 dias.</p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2">Os agentes são personalizados para cada cliente?</h3>
+                        <p class="text-gray-300">Sim! Cada agente é desenvolvido especificamente para atender às necessidades e processos únicos de cada cliente. Não oferecemos soluções genéricas, mas sim agentes moldados para seu negócio.</p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2">Qual é o tempo de retorno do investimento (ROI)?</h3>
+                        <p class="text-gray-300">Nossos clientes costumam ver ROI positivo em 3-6 meses, com reduções significativas no tempo de processamento e aumento da produtividade. Oferecemos relatórios detalhados de ROI para acompanhar os resultados.</p>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2">Como é garantida a segurança dos dados?</h3>
+                        <p class="text-gray-300">Seguimos rigorosamente a LGPD e implementamos criptografia end-to-end, segregação por tenant e trilhas de auditoria completas. Todos os dados são processados em infraestrutura segura na AWS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-task-blue to-task-light-blue">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold mb-4">Pronto para começar sua transformação digital?</h2>
+                <p class="text-xl mb-8 text-white/90">
+                    Entre em contato conosco e descubra como nossos agentes de IA podem revolucionar seus processos.
+                </p>
+                <a href="#form" class="inline-block bg-white text-task-blue px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                    Solicitar Demo Agora
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4">Task AI</h3>
+                    <p class="text-gray-300 mb-4">
+                        Democratizando o uso da inteligência artificial através de agentes personalizados 
+                        que simplificam processos e aumentam a produtividade.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="sobre.html" class="text-gray-300 hover:text-white">Sobre Nós</a></li>
+                        <li><a href="produtos.html" class="text-gray-300 hover:text-white">Produtos</a></li>
+                        <li><a href="contato.html" class="text-white hover:text-task-light-blue">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>contato@taskai.com</li>
+                        <li>+55 (11) 99999-9999</li>
+                        <li>São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2024 Task AI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
